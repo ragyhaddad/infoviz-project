@@ -1,0 +1,38 @@
+
+.dog-menu{
+
+    background: white;
+    overflow-x: auto;
+    position: relative;
+    top:30px;
+    max-width: 90%;
+    min-width: 80%;
+    margin:auto;
+}
+
+#dog-img {
+    width: 200px;
+    height: 100px;
+}
+#dog-img img{
+    width:80px;
+}
+
+td{
+    position: relative;
+    width:400px;
+    height: 100px;
+
+}
+table {
+
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 80%;
+    border: 1px solid #ddd;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}

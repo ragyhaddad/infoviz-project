@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/menu.css" />
+    <link rel="stylesheet" href="./leaflet/leaflet.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/data.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/filter.css" />
+    
+</head>
+<body>
+
+    <!-- Overlay-->
+<div style='display:none;' class="overlay" onclick='hideOverlay()'>
+    <div class="overlay-container">
+        <div id='details' class="overlay-container-content"></div>
+    </div>
+</div>
+
+    <!-- Main Container -->
+<div class="main-container">
+    <div class="header"><h3>Dogs Of New York</h3>
+        <div><h3 id='year-tag' onclick='setYear(2013)'>2013</h3></div>
+        <div><h3 id='year-tag' onclick='setYear(2014)'>2014</h3></div>
+        <div><h3 id='year-tag' onclick='setYear(2015)'>2015</h3></div>
+        <div><h3 id='year-tag' onclick='setYear(2016)'>2016</h3></div>
+    </div>
+    <!-- Main Viz -->
+    <div class="viz-container" onclick='resetFilter();'>
+        <div class="overlay-spinner"><div class="loader"></div>
+    </div>
+    </div>
+    <!-- Sidebar-->
+    <div class="sidebar">
+        <div id='main-map' class="map-container"></div>
+        <div class="filter-container">
+            <div id='text-input' class="filter-section">
+                <input id='textinput' type="text" placeholder="Search for Dog Names..">
+            </div>
+            <div class="filter-section">
+                    <div class="filter-button">
+                        <button onclick="setOptions()">FILTER</button>
+                    </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src ='https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.js'></script>
+<script src="./scripts/globals.js"></script>
+<script src="./scripts/explore.js"></script>
+<script src ='./scripts/radial.js'></script>
+<script src ='./scripts/details.js'></script>
+<script src="./leaflet/leaflet.js"></script>
+<!-- <script src="./scripts/maps.js"></script> -->
+<script src="./scripts/fetch.js"></script>
+<script src="./scripts/main.js"></script>
+<script>
+fetchYear(g_year);
+drawMap();
+</script>
+
+
+
