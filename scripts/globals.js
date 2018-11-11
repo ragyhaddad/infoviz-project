@@ -11,6 +11,8 @@ var d3_color = {blue:'#387cea',orange:'#ef7428'}
  */
 var g_data = null
 var filtered_nodes = [];
+
+
 /**
  * Stores Global Year
  */

@@ -36,9 +36,12 @@ function setOptions(){
  * 
  * @param {Int} year 
  */
-function setYear(year){
+function setYear(){
+    resetFilter()
     d3.select('svg').remove();
-    filterOptions.year;
+    var year = document.getElementById("year-selector").value;
+    
+    filterOptions.year = year;
     g_year = year;
     fetchYear(g_year);
 }

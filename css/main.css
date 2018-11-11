@@ -52,7 +52,7 @@ circle:hover{
 .header div{
     position: relative;
     text-align: center;
-    margin-left:100px;
+    margin-left:20px;
     left:100px;
     display: flex; 
     justify-content: center;
@@ -145,7 +145,15 @@ circle:hover{
     height: 40px;
     animation: spin 0.9s linear infinite;
 }
-
+select{
+    background:var(--darker);
+    width:80px;
+    font-size: 16px;
+    text-align: center;
+    outline:none; 
+    border:none;
+    color:white;
+}
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
